@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alert and Redirect</title>
-    <script>
-        function showAlertAndRedirect() {
-            alert("Click OK to redirect the page.");
-            window.location.href = "https://iwk7273.github.io/test/"; // Redirect to the specified URL
-        }
-    </script>
+    <title>ファイルダウンロード</title>
 </head>
 <body>
-    <button onclick="showAlertAndRedirect()">Show Alert</button>
+    <h1>ファイルダウンロード</h1>
+    <p>以下のリンクをクリックしてファイルをダウンロードしてください。</p>
+    
+    <!-- ファイルダウンロードリンク -->
+    <a href="sample.pdf" download>📥 PDFをダウンロード</a>
+
+    <br><br>
+
+    <!-- ZIPファイルダウンロードリンク -->
+    <a href="report.zip" download>📥 ZIPファイルをダウンロード</a>
+
+    <br><br>
+
+    <!-- JavaScriptで自動ダウンロード（オプション） -->
+    <button onclick="downloadFile('sample.pdf')">📥 PDFを自動ダウンロード</button>
+
+    <script>
+        function downloadFile(filename) {
+            const link = document.createElement('a');
+            link.href = filename;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
