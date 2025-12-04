@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ファイルダウンロード</title>
+</head>
+<body>
+
+    <h1>サンプルファイル ダウンロード</h1>
+    <p>以下のリンクをクリックしてファイルをダウンロードしてください。</p>
+
+    <ul>
+        <li>
+            <a href="test.txt" download="test.txt">
+                test をダウンロード
+            </a>
+        </li>
+
+        <li>
+            <a href="てすと.txt" download="てすと.txt">
+                てすと をダウンロード
+            </a>
+        </li>
+
+        <li>
+            <a href="てす%20と.txt" download="てす と.txt">
+                てす と をダウンロード
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>
